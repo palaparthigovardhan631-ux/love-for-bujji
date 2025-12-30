@@ -1,26 +1,91 @@
-/* Proposal Screen */
+body {
+  margin: 0;
+  overflow: hidden;
+  background: black;
+}
+
+/* Night sky */
+.sky {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(#020111, #000);
+  z-index: -2;
+}
+
+.moon {
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 40px 20px white;
+}
+
+/* Reel */
+.video {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+#slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: fade 4s infinite, zoom 6s infinite;
+}
+
+.text {
+  position: absolute;
+  bottom: 18%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: cursive;
+  text-shadow: 0 0 15px pink;
+}
+
+.en { font-size: 2.4rem; }
+.te { font-size: 2rem; margin-top: 10px; }
+#counter { margin-top: 10px; font-size: 1.5rem; }
+
+/* Fade */
+#fade {
+  position: fixed;
+  inset: 0;
+  background: black;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 3s;
+  z-index: 90;
+}
+
+/* Proposal */
 #proposal {
   position: fixed;
   inset: 0;
-  background: radial-gradient(#120018, black);
+  background: radial-gradient(#14001f, black);
   display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
-  text-align: center;
-  z-index: 200;
+  z-index: 100;
   font-family: cursive;
 }
 
-#proposal h1 {
-  font-size: 3rem;
-  margin: 20px 0;
-}
+#proposal h1 { font-size: 3rem; }
+#proposal p { font-size: 1.6rem; margin: 15px 0; }
 
-#proposal p {
-  font-size: 1.6rem;
-  margin-bottom: 25px;
+#proposal button {
+  padding: 12px 35px;
+  font-size: 18px;
+  border-radius: 30px;
+  border: none;
+  background: pink;
+  cursor: pointer;
 }
 
 .ring {
@@ -28,14 +93,17 @@
   animation: pulse 1.5s infinite;
 }
 
-.buttons button {
-  margin: 10px;
-  padding: 12px 30px;
-  font-size: 18px;
-  border: none;
-  border-radius: 30px;
-  background: pink;
-  cursor: pointer;
+@keyframes fade {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes zoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
 @keyframes pulse {
