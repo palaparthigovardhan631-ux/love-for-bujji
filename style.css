@@ -1,0 +1,45 @@
+/* Proposal Screen */
+#proposal {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(#120018, black);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  z-index: 200;
+  font-family: cursive;
+}
+
+#proposal h1 {
+  font-size: 3rem;
+  margin: 20px 0;
+}
+
+#proposal p {
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+}
+
+.ring {
+  font-size: 5rem;
+  animation: pulse 1.5s infinite;
+}
+
+.buttons button {
+  margin: 10px;
+  padding: 12px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  background: pink;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}

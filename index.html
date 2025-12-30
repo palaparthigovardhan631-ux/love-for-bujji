@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Bujji ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(#000, #120018);
+      color: white;
+      font-family: cursive;
+    }
+    .box {
+      text-align: center;
+    }
+    input {
+      padding: 12px;
+      font-size: 18px;
+      border-radius: 8px;
+      border: none;
+      margin-top: 10px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 25px;
+      font-size: 18px;
+      border-radius: 20px;
+      border: none;
+      background: pink;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Only for my bujji ❤️</h2>
+  <input type="password" id="pwd" placeholder="Secret word">
+  <br>
+  <button onclick="check()">Open 💖</button>
+</div>
+
+<script>
+function check() {
+  if (document.getElementById("pwd").value === "bujji") {
+    window.location.href = "love.html";
+  } else {
+    alert("Wrong password 😢");
+  }
+}
+</script>
+
+</body>
+</html>
