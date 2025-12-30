@@ -5,7 +5,7 @@ document.body.addEventListener("click", () => {
 }, { once: true });
 
 /* Slideshow */
-const photos = ["photo1.jpg", "photo2.jpg", "photo3.jpg"];
+const photos = ["photo1.jpg.jpeg", "photo2.jpg.jpeg", "photo3.jpg.jpeg"];
 let i = 0;
 const slide = document.getElementById("slide");
 const video = document.getElementById("video");
